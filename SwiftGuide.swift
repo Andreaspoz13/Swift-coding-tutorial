@@ -77,3 +77,20 @@ for index in 1...5 {
 
 //LOOPS part 2
 
+
+var whileCounter = 5
+
+while whileCounter > 0 {  //if the condition is met it's going to loop like a for loop the code in the                        //{}
+    print("hello")
+    whileCounter -= 1   // this is equal to varExample = varExample -1
+    //this will decrement the value of whileCounter so it won't loop the while loop forever and crash
+    
+}
+
+var repeatCounter = 0
+repeat {
+    print("hello Mr. repeat-loop!")
+    repeatCounter -= 1
+}while repeatCounter > 0
+// this instead runs the command in the repeat loop once and then checks the while condition after
+// this is why the print command runs only once and then stops. Try it yourself with another number!
