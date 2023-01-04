@@ -94,3 +94,57 @@ repeat {
 }while repeatCounter > 0
 // this instead runs the command in the repeat loop once and then checks the while condition after
 // this is why the print command runs only once and then stops. Try it yourself with another number!
+
+//FUNCTIONS part 1
+
+//functions are basicaly commands you call to call a bunch of code that is located inside the function
+func substractNumbers() {
+    let a = 5
+    let b = 10                      //this is a function
+    let finalResult = b - a
+    print(finalResult)
+}
+substractNumbers() // this basically runs the specific lines of code inside the function
+//please note that you cannot declare variables that are not inside the function
+//this also applies to loops. I also forgot to mention that methods and functions are the same thing!
+
+//Classes part 1
+//A Class is like a blueprint of an object. more like a template you should call it!
+class WebsiteInfo {
+    var name:String = ""
+    var author:String = ""
+    var comments:Int = 0        //this is our class also known as a little template for us to use!
+    
+    func addComment() {
+        comments += 1
+    }
+    func addFiveComments() {
+        for addFiveComments in 1...5 {
+            addComment()
+        }
+    }
+}
+
+let firstPost = WebsiteInfo()
+firstPost.name = "Some random title"            //we then use the template and create an actual thing                                               //with it
+firstPost.author = "Andreas Katsigiannis"
+firstPost.comments = 0
+firstPost.addComment()
+print(firstPost.comments)
+
+let secondPost = WebsiteInfo()
+secondPost.name = "How to get infinite money!"
+secondPost.author = "Rikkos Mappouros"
+secondPost.comments = 10
+secondPost.addFiveComments() //here i created a new method that adds 5 comments
+print(secondPost.comments)
+
+func printPost() {
+    print(secondPost.name)
+    print(secondPost.author)
+    print("comments -->")
+    print(secondPost.comments)
+}
+printPost()  //right here I created a function that prints out every info the post has to offer!
+
+
